@@ -15,10 +15,11 @@ $(document).ready(function() {
       success: function(response) {
         console.log(`${response.data.length}`);
         console.log(`${response.data[0].profile.first_name}`);
-        console.log(`${response.data[1].profile.first_name}`);
         $('.first').text(`${response.data[0].profile.first_name}`);
         $('.last').text(`${response.data[0].profile.last_name}`);
-        $('.address').text(`${response.data[0].practices[0]["visit_address"]["street"]}`);
+        $('.address').text(`${response.data[0].practices[0].visit_address.street}`);
+        $('.phone').text(`${response.data[0].practices[0].phones[0].number}`);
+
       },
       error: function() {
         $('.error').text("")
