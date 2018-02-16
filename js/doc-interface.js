@@ -13,7 +13,9 @@ $(document).ready(function() {
         format: 'json'
       },
       success: function(response) {
+        console.log(`${response.data.length}`);
         console.log(`${response.data[0].profile.first_name}`);
+        console.log(`${response.data[1].profile.first_name}`);
         // $('.showFirst').text(`${}`);
         // $('.showLast').text(`${}`);
       },
