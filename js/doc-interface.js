@@ -17,10 +17,11 @@ $(document).ready(function() {
         for(let i=0; i < response.data.length; i++) {
           setTimeout(function() { console.log(response.data[i].profile.first_name); },1000);
           let first = response.data[i].profile.first_name;
+          let last = response.data[i].profile.last_name;
 
 
 
-        $('.first').text(first);
+        $('.first').append("<ul>" + first + " " + last + "</ul>");
         $('.last').text(" " + `${response.data[0].profile.last_name}`);
         $('.address').text(" " + `${response.data[0].practices[0].visit_address.street}`);
         $('.phone').text(" " + `${response.data[0].practices[0].phones[0].number}`);
