@@ -7,13 +7,13 @@ $(document).ready(function() {
     let symptom = $('#symptom').val();
     $('#symptom').val("");
     $.ajax({
-      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=headache&location=OR&user_location=45.5231%2C122.6765&skip=0&limit=10&user_key=${apiKey}`,
+      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=${symptom}&location=OR&user_location=45.5231%2C122.6765&skip=0&limit=10&user_key=${apiKey}`,
       type: 'GET',
       data: {
         format: 'json'
       },
       success: function(response) {
-        console.log(`${response.name}`);
+        console.log(`${response.data[0].profile.first_name}`);
         // $('.showFirst').text(`${}`);
         // $('.showLast').text(`${}`);
       },
