@@ -1,4 +1,5 @@
 import { Doc } from './../js/doc.js';
+var apiKey = require('./../.env').apiKey;
 
 $(document).ready(function() {
   $('#sym-form').submit(function(event){
@@ -6,14 +7,15 @@ $(document).ready(function() {
     let symptom = $('#symptom').val();
     $('#symptom').val("");
     $.ajax({
-      url: ``
+      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=headache&location=OR&user_location=45.5231%2C122.6765&skip=0&limit=10&user_key=${apiKey}`,
       type: 'GET',
       data: {
         format: 'json'
       },
       success: function(response) {
-        $('.showFirst').text(`${}`);
-        $('.showLast').text(`${}`);
+        console.log(`${response.name}`);
+        // $('.showFirst').text(`${}`);
+        // $('.showLast').text(`${}`);
       },
       error: function() {
         $('.error').text("")
