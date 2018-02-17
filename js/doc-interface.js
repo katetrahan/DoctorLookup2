@@ -18,16 +18,13 @@ $(document).ready(function() {
           setTimeout(function() { console.log(response.data[i].profile.first_name); },1000);
           let first = response.data[i].profile.first_name;
           let last = response.data[i].profile.last_name;
-
-
-
-        $('.first').append("<ul>" + first + " " + last + "</ul>");
-        $('.last').text(" " + `${response.data[0].profile.last_name}`);
-        $('.address').text(" " + `${response.data[0].practices[0].visit_address.street}`);
-        $('.phone').text(" " + `${response.data[0].practices[0].phones[0].number}`);
-        $('.website').text(" " + `${response.data[0].practices[0].website}`); // issue
-        $('.patient').text(" " + `${response.data[0].practices[0].accepts_new_patients}`);
-      }
+          let address = response.data[i].practices[i].visit_address.street;
+          let phone = response.data[i].practices[i].phones[i].number;
+          // let website = response.data[i].practices[i].website;
+          let patient = response.data[i].practices[i].accepts_new_patients;
+        $('.doctor').append("<ul>" + "<li>First:" + " " + first + "</li>" + "<li>Last: " + " " + last + "</li>" + "<li>Address: " + " " + address + "</li>" + "<li>Phone:" + " " + phone + "</li>" +
+         "<li>Accepts new patients:" + " " + patient + "</ul>");
+       }
       },
       error: function() {
         $('.errors').text("There was an error with the request.")
