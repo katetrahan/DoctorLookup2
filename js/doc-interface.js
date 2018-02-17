@@ -12,22 +12,19 @@ $(document).ready(function() {
       data: {
         format: 'json'
       },
-
       success: function(response) {
         for(let i=0; i < response.data.length; i++) {
-          setTimeout(function() { console.log(response.data[i].profile.first_name); },1000);
           let first = response.data[i].profile.first_name;
           let last = response.data[i].profile.last_name;
           let address = response.data[i].practices[i].visit_address.street;
           let phone = response.data[i].practices[i].phones[i].number;
-          // let website = response.data[i].practices[i].website;
           let patient = response.data[i].practices[i].accepts_new_patients;
         $('.doctor').append("<ul>" + "<li>First:" + " " + first + "</li>" + "<li>Last: " + " " + last + "</li>" + "<li>Address: " + " " + address + "</li>" + "<li>Phone:" + " " + phone + "</li>" +
          "<li>Accepts new patients:" + " " + patient + "</ul>");
        }
       },
-      error: function() {
-        $('.errors').text("There was an error with the request.")
+      error: function(request, status, error) {
+        $('.errors').text("err");
       }
     });
   });

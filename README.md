@@ -13,7 +13,7 @@ Configuration/dependencies
 Specs
   * Spec 1: 'should correctly make API call'.
   * Spec 2: 'should correctly parse data from the API response'.
-  * Spec 3: 'should be able to accept a user medical issue'.
+  * Spec 3: 'should be able to accept a user medical issue/name of doctor'.
   * Spec 4: 'should output doctor information(info stored in API)'.
   * Spec 5: 'should return error message stating the error'.
   * Spec 6: 'should return message if no doctors are found in that area'.
@@ -52,7 +52,7 @@ _This is an application that uses JavaScript and the BetterDoctor API to take us
 
 ## Known Bugs
 
-_No known issues._
+_Missing error handlers, currently all in one file as opposed to two separate JS files._
 
 ## Support and contact details
 

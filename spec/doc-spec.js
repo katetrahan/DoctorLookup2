@@ -1,6 +1,3 @@
-import { Doc } from './../js/doc.js';
-
+import medCall from './../js/doc.js';
 describe('Doc' , function() {
-
-
 });
