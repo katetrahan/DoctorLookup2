@@ -13,6 +13,9 @@ $(document).ready(function() {
         format: 'json'
       },
       success: function(response) {
+        if(response.data.length === 0) {
+          $('.errors').text("there are no doctors listed in your area for this symptom");
+        }
         for(let i=0; i < response.data.length; i++) {
           let first = response.data[i].profile.first_name;
           let last = response.data[i].profile.last_name;
