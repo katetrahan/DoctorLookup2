@@ -1,4 +1,5 @@
-function medCall() {
+var apiKey = require('./../.env').apiKey;
+export function medCall(symptom) {
   $.ajax({
     url: `https://api.betterdoctor.com/2016-03-01/doctors?query=${symptom}&location=OR&user_location=45.5231%2C122.6765&skip=0&limit=10&user_key=${apiKey}`,
     type: 'GET',
