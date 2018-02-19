@@ -16,15 +16,15 @@ $(document).ready(function() {
         for(let i=0; i < response.data.length; i++) {
           let first = response.data[i].profile.first_name;
           let last = response.data[i].profile.last_name;
-          let address = response.data[i].practices[i].visit_address.street;
-          let phone = response.data[i].practices[i].phones[i].number;
-          let patient = response.data[i].practices[i].accepts_new_patients;
+          let address = response.data[i].practices[0].visit_address.street;
+          let phone = response.data[i].practices[0].phones[0].number;
+          let patient = response.data[i].practices[0].accepts_new_patients;
         $('.doctor').append("<ul>" + "<li>First:" + " " + first + "</li>" + "<li>Last: " + " " + last + "</li>" + "<li>Address: " + " " + address + "</li>" + "<li>Phone:" + " " + phone + "</li>" +
          "<li>Accepts new patients:" + " " + patient + "</ul>");
        }
       },
-      error: function(request, status, error) {
-        $('.errors').text("err");
+      error: function() {
+        $('.errors').text("there was an error with your request");
       }
     });
   });
