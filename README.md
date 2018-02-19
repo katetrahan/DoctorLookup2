@@ -52,7 +52,7 @@ _This is an application that uses JavaScript and the BetterDoctor API to take us
 
 ## Known Bugs
 
-_Missing error handlers, currently all in one file as opposed to two separate JS files._
+_No known issues._
 
 ## Support and contact details
 
