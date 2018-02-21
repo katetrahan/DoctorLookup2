@@ -1,0 +1,17 @@
+body {
+  background-color: #ABCCC6;
+  padding-top: 100px;
+}
+
+h2 {
+  text-align: center;
+}
+
+label {
+  text-align: center;
+  margin-left: 20%;
+}
+
+p {
+  font-size: 16pt;
+}
