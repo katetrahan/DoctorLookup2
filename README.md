@@ -45,6 +45,14 @@ _This is an application that uses JavaScript and the BetterDoctor API to take us
 
 * _Clone repository to your machine from GitHub_
 * _Open cloned repository in Atom_
+* _Visit [BetterDoctorAPI](https://developer.betterdoctor.com/)_
+* _Select "Sign up" if you do not already have an account_
+* _Fill out the form provided_
+* _Select "get your free API key"_
+* _API key is listed under My Account > Applications_
+* _Create an .env file at the top level of the directory_
+* _In .env file create an API key variable. Example ```exports.apiKey = "example12345"```_
+* _Include .env in .gitignore._
 * _type npm install in terminal_
 * _type bower install in terminal_
 * _type gulp build in terminal_
