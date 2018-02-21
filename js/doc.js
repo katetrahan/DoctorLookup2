@@ -15,9 +15,10 @@ export function medCall(symptom) {
         let last = response.data[i].profile.last_name;
         let address = response.data[i].practices[0].visit_address.street;
         let phone = response.data[i].practices[0].phones[0].number;
+        let web = response.data[i].practices[0].website;
         let patient = response.data[i].practices[0].accepts_new_patients;
       $('.doctor').append("<ul>" + "<li>First:" + " " + first + "</li>" + "<li>Last: " + " " + last + "</li>" + "<li>Address: " + " " + address + "</li>" + "<li>Phone:" + " " + phone + "</li>" +
-       "<li>Accepts new patients:" + " " + patient + "</ul>");
+       "<li>Accepts new patients:" + " " + patient + "<li>Website:" + " " + web + "</ul>");
      }
     },
     error: function() {
