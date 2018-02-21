@@ -44,7 +44,7 @@ _This is an application that uses JavaScript and the BetterDoctor API to take us
 ## Setup/Installation Requirements
 
 * _Clone repository to your machine from GitHub_
-* _Open cloned repository in Atom_
+* _Open cloned repository in text editor_
 * _Visit [BetterDoctorAPI](https://developer.betterdoctor.com/)_
 * _Select "Sign up" if you do not already have an account_
 * _Fill out the form provided_
@@ -53,10 +53,10 @@ _This is an application that uses JavaScript and the BetterDoctor API to take us
 * _Create an .env file at the top level of the directory_
 * _The .env file should include: ```exports.apiKey = "examplekey12345"```_
 * _Include .env in .gitignore._
-* _```$ npm install in terminal```_
-* _```$ bower install in terminal```_
-* _``` $ type gulp build in terminal ```_
-* _``` $ gulp serve in terminal ```_
+* _```$ npm install```_
+* _```$ bower install```_
+* _``` $ gulp build```_
+* _``` $ gulp serve```_
 
 ## Known Bugs
 
