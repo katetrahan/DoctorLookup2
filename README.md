@@ -51,12 +51,12 @@ _This is an application that uses JavaScript and the BetterDoctor API to take us
 * _Select "get your free API key"_
 * _API key is listed under My Account > Applications_
 * _Create an .env file at the top level of the directory_
-* _In .env file create an API key variable. Example ```exports.apiKey = "example12345"```_
+* _The .env file should include: ```exports.apiKey = "examplekey12345"```_
 * _Include .env in .gitignore._
-* _type npm install in terminal_
-* _type bower install in terminal_
-* _type gulp build in terminal_
-* _type gulp serve in terminal_
+* _```$ npm install in terminal```_
+* _```$ bower install in terminal```_
+* _``` $ type gulp build in terminal ```_
+* _``` $ gulp serve in terminal ```_
 
 ## Known Bugs
 
